@@ -48,4 +48,5 @@ img {
 
 img:hover {
   background-color: gray;
+  cursor: grab;
 }

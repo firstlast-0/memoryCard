@@ -54,7 +54,11 @@ function App() {
 
     useEffect(() => {
         getPok();                       
-    }, []);    
+    }, []);
+
+    if (data.length === 0) {
+       return <p>Loading images...</p>;
+    }
 
     return (
         <>
@@ -62,6 +66,7 @@ function App() {
             <h3>Get points by clicking on an image but don&apos;t click on any more than once!</h3>
             <div>High Score: {hScore}</div>
             <div>Score: {score}</div>
+            
             {data.map((pok, index) => { 
                 return (<img src={pok.url} alt={pok.name} onClick={(event) => clickHandler(event.target.alt)} key={index}/>)
             })}            
