@@ -57,7 +57,7 @@ function App() {
     }, []);
 
     if (data.length === 0) {
-       return <p>Loading images...</p>;
+       return <div className="loading"></div>;
     }
 
     return (
